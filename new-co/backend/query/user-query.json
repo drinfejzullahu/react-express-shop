@@ -1,0 +1,9 @@
+{
+  "getUsers": "SELECT  * FROM [User]",
+  "getRoles": "SELECT * FROM [Role]",
+  "addUser": "INSERT INTO [User] (name,surname,address,phone,email,password,roleId) VALUES (@name,@surname,@address,@phone,@email,@password,@roleId)",
+  "addShopAssistnt": "exec AddNewShopAssistent @name= @name,@surname=@surname,@address=@address,@phone=@phone,@email=@email,@password=@password,@roleId=@roleId",
+  "deleteUsr": "DELETE FROM [User] WHERE id = @id",
+  "updateUserPassword": "UPDATE [User] SET password = @newpassword WHERE name = @name",
+  "updtUser": "UPDATE [User] SET name = @name,surname = @surname,address=@address,phone=@phone,email=@email,password=@password,roleId=@roleId  WHERE id = @id"
+}

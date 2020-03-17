@@ -1,0 +1,7 @@
+{
+  "getCustomers": "SELECT * FROM [Customer]",
+  "getCustomerById": "SELECT * FROM [Customer] where id = @id",
+  "addCustomer": "exec AddCustomer @name=@name,@surname=@surname,@address=@address,@phone=@phone ",
+  "dltCustomer": "DELETE FROM [Customer] WHERE id = @id",
+  "updCustomer": "UPDATE [Customer] SET name = @name , surname = @surname ,address = @address , phone = @phone WHERE id = @id"
+}

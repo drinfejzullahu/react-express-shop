@@ -1,0 +1,8 @@
+{
+  "getServices": "SELECT * FROM [Service]",
+  "getServiceById": "exec GetServicesById @s_id = @s_id",
+  "addService": "exec AddService @description=@description,@price=@price,@status=@status,@name=@name ",
+  "dltService": "exec RemoveService @id = @id",
+  "updateServiceSt": "exec EnableDesableService @status = @status, @name = @name",
+  "updtService": "UPDATE Service SET description=@description ,price=@price ,status = @status , name = @name where id = @id"
+}

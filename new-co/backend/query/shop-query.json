@@ -1,0 +1,7 @@
+{
+  "getShops": "SELECT * FROM [Shop]",
+  "addShop": "exec CreateShop @address=@address,@ass_id=@ass_id,@name=@name ",
+  "dltShop": "DELETE FROM [Shop] WHERE id = @id",
+  "updateShopNm": "UPDATE [Shop] SET name = @newname WHERE name = @name",
+  "updtShop": "UPDATE [Shop] SET address=@address, ass_id = @ass_id, name = @name WHERE id = @id"
+}

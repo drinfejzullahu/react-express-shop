@@ -1,0 +1,8 @@
+{
+  "getProductServices": "SELECT * FROM [Product-Service]",
+  "getProductServicesById": "exec GetProductServicesById @p_id = @p_id",
+  "addProductService": "INSERT INTO [Product-Service] (p_id,s_id) VALUES (@p_id,@s_id) ",
+  "getProductAndService": "SELECT p.p_id,p.description as 'product_description',p.name as 'product_name',p.quantity,p.validity,p.state, s.id,s.name as 'service_name',s.price,s.description as 'service_description',p.sh_id FROM [Product] as p INNER JOIN [Product-Service] as ps ON p.p_id = ps.p_id inner join Service as s on s.id = ps.s_id ",
+  "dltProductService": "DELETE FROM [Product-Service] WHERE id = @id and p_id = @p_id and s_id = @s_id",
+  "updateSrInPr": "UPDATE [Product-Service] SET s_id = @new_s_id WHERE p_id = @p_id"
+}

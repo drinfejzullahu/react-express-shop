@@ -1,0 +1,8 @@
+{
+  "getSoldProducts": "SELECT  * FROM [Sold]",
+  "getSoldProductsForAssistant": "SELECT * FROM [Sold] where ass_id = @ass_id",
+  "getSoldProductsForShop": "SELECT * FROM [Sold] where sh_id = @sh_id",
+  "addSoldProduct": "exec AddSale @p_id=@p_id,@sh_id=@sh_id,@ass_id=@ass_id,@c_id=@c_id ",
+  "dltSoldProduct": "DELETE FROM [Sold] WHERE p_id = @p_id and sh_id = @sh_id and ass_id = @ass_id and c_id = @c_id",
+  "updtSoldProduct": "UPDATE [Sold] SET p_id = @p_id , sh_id=@sh_id, ass_id=@ass_id, c_id=@c_id  WHERE id = @id"
+}

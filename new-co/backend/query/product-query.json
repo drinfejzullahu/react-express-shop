@@ -1,0 +1,9 @@
+{
+  "getProducts": "SELECT * FROM [Product]",
+  "getPrOutOfStock": "SELECT * FROM [Product] where quantity = 0",
+  "addProduct": "exec AddProduct @description=@description,@validity=@validity,@state=@state,@quantity=@quantity,@name=@name,@sh_id=@sh_id",
+  "dltProduct": "DELETE FROM [Product] WHERE id = @id",
+  "updateProductQnt": "UPDATE [Product] SET quantity = quantity-1 WHERE p_id = @p_id",
+  "updateProduct": "UPDATE [Product] SET description = @description , validity = @validity, state= @state,quantity=@quantity, name = @name  WHERE p_id = @p_id",
+  "changeProductState": "exec ChangeProductState @state = @state, @name = @name"
+}
